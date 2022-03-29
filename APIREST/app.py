@@ -13,8 +13,6 @@ from tinydb.storages import MemoryStorage
 server = Flask(__name__)
 spec = FlaskPydanticSpec('flask', title='Live de Python')
 spec.register(server)
-#database = TinyDB('database.json')
-database = TinyDB(storage=MemoryStorage)
 c = count() 
 
 class QueryPessoa(BaseModel):
